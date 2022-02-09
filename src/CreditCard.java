@@ -6,13 +6,13 @@ public class CreditCard {
 	double balance;
 	
 	
-	public CreditCard(String creditCardNumber, String holderName, int expirationYear, int expirationMonth, double balance) {
+	public CreditCard(String creditCardNumber, String holderName, int expirationYear, int expirationMonth) {
 		super();
 		this.creditCardNumber = creditCardNumber;
 		this.holderName = holderName;
 		this.expirationYear = expirationYear;
 		this.expirationMonth = expirationMonth;
-		this.balance = balance;
+		this.balance = 0;
 	}
 
 
@@ -55,15 +55,6 @@ public class CreditCard {
 		this.expirationMonth = expirationMonth;
 	}
 
-
-	public double getBalance() {
-		return balance;
-	}
-
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
 	
 	
 	void addBalance(double balance) {

@@ -6,7 +6,7 @@ public class CreditCardApp {
 		int entry;
 		double value;
 		
-		CreditCard creditCard = new CreditCard("027484375", "Rogério Fidencio", 2028, 06, 1000.00);
+		CreditCard creditCard = new CreditCard("027484375", "Rogério Fidencio", 2028, 06);
 		
 		do {
 			System.out.println("para adicionar limite ao cartão digite 1 / para fazer uma compra digite 2 / para sair digite 3.");
@@ -20,6 +20,7 @@ public class CreditCardApp {
 				value = input.nextDouble();
 				
 				creditCard.addBalance(value);
+				System.out.printf("Limite adicionado no valor de: %.2f R$\n", value);
 			}
 			
 			if (entry == 2) {
@@ -28,7 +29,7 @@ public class CreditCardApp {
 				value = input.nextDouble();
 				
 				if (creditCard.buy(value)) {
-					System.out.println("Compra efetuada com sucesso!");
+					System.out.printf("Compra no valor de %.2f R$ efetuada com sucesso!\n", value);
 				}
 				else {
 					System.out.println("Compra recusada!");					
